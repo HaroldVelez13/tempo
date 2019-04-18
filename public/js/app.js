@@ -7,9 +7,7 @@
 	app.controller('TempoController', ['$scope' ,'moment', '$http','TempoService',
 										function($scope, moment,$http,TempoService) {
 	    moment.locale('es');
-	    $scope.data_now = new moment();
-	    
-	    $scope.actual_data;
+	    $scope.data_now = new moment();	    
 	    $scope.users=[];
 	    $scope.actual_user;
 	    $scope.searchText="";
@@ -39,8 +37,7 @@
 	    }
 
 	    let formatUsers = function(allUsers){
-	    	var users = [];
-	    	$scope.actual_data = $scope.data_now.format(" dddd DD  MMMM ")
+	    	var users = [];	    	
 	    	angular.forEach(allUsers, function(user) {
 	    		let date = new moment(user.end_subscription).add(1, 'days');
 	    		let difference = date.diff($scope.data_now,'days');
@@ -56,7 +53,7 @@
 			$scope.users = users;	
 	    }
 
-	     $scope.startClass = function(difference){
+	    $scope.startClass = function(difference){
 	     	
 	     	if(difference<=0)
 	         return "red-text";
@@ -66,16 +63,6 @@
 
 	     	else
 	         return "teal-text";
-	    }
-
-	    $scope.addDay = function(){
-	    	$scope.data_now = $scope.data_now.add(1,'days');
-	    	formatUsers($scope.users);
-	    }
-
-	    $scope.subtractDay = function(){
-	    	$scope.data_now = $scope.data_now.add(-1,'days');
-	    	formatUsers($scope.users);
 	    }
 
 	    $scope.modalTempo = function(user){	    	
@@ -106,35 +93,31 @@
 
 	    $scope.checkFilter = function(user)
 		{
-		    // Do some tests
-
 		    if($scope.checkAll)
 		    {		    	
-		        return true; // this will be listed in the results
+		        return true; 
 		    }
 		    else if($scope.checkWarning )
 		    {	
 		    	if (user.difference<5 && user.difference>0) {
 		    		return true
-		    	}	    	
-		        return false; // this will be listed in the results
+		    	} 
 		    }
 
 		    else if($scope.checkDanger )
-		    {	
+		    {
 		    	if (user.difference==0) {
 		    		return true
 		    	}	    	
-		        return false; // this will be listed in the results
+		         
 		    }
 
+		    return false;
+
 		    
-		};
+		};    
 
-	    
-
-	    getUsers();
-	    
+	    getUsers();    
 
 	    
 	}]);

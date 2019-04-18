@@ -35,32 +35,13 @@
         </div>     
         @verbatim
         <main class="container" ng-controller="TempoController">
-
-          <div class="center row">
-            <ul class="pagination card-panel black ">
-              <li class="waves-effect">
-                <a href="#!" ng-click="subtractDay()">
-                  <i class="material-icons white-text">chevron_left</i>
-                </a>
-              </li>
-              <li >
-                <a class="white-text">Dia actual: {{actual_data}}
-                </a>
-              </li> 
-              <li class="waves-effect">
-                <a href="#!" ng-click="addDay()">
-                  <i class="material-icons white-text">chevron_right</i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          
+                   
           <div class="row">  
             <div class="col s12 m8 offset-m2">           
                    
               <ul class="collection with-header ">
                 <li class="collection-header teal darken-3">
-                  <h4 class="center white-text tempo-font">USUARIOS</h4>
+                  <h5 class="center white-text tempo-font">USUARIOS</h5>
                   <nav>
                     <div class="nav-wrapper">
                       <form class="row"> 

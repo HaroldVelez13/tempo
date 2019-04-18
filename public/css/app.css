@@ -2,7 +2,7 @@
 font-family: "SportsWorld";
 font-style: normal;
 font-weight: normal;
-src: local('SportsWorld'), url("https://tempo-training.herokuapp.com/fonts/sports_world/Sports-World-Regular.otf") format("truetype");
+src: local('SportsWorld'), url("https://tempo-training.herokuapp.com/Sports-World-Regular.otf") format("truetype");
 
 }
 
