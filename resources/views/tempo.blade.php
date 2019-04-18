@@ -53,28 +53,10 @@
                                           
                       </form>
                     </div>
-                  </nav>
-                  <p class="col s4">
-                          <label>
-                            <input ng-model="checkAll" type="checkbox" ng-change="checkChange('checkAll')" checked />
-                            <span>Todos</span>
-                          </label>
-                        </p>
-                        <p class="col s4">
-                          <label>
-                            <input ng-model="checkWarning" type="checkbox" ng-change="checkChange('checkWarning')" />
-                            <span>Riesgo</span>
-                          </label>
-                        </p>
-                        <p class="col s4">
-                          <label>
-                            <input ng-model="checkDanger" type="checkbox" ng-change="checkChange('checkDanger')" />
-                            <span>Inhabilitados</span>
-                          </label>
-                        </p>   
+                  </nav>                  
                 </li>
                 <br>
-                <li class="collection-item center" >
+                <li class="collection-item center" >                  
                   <h5 class="title">Días hábiles</h5>
                   <p class="row ">
                   <span class="col s4 valign-wrapper">
@@ -87,6 +69,28 @@
                     <i class="material-icons red-text" >grade</i> Inhabilitado 
                   </span>               
                   </p>
+                  <div class="row">
+                    <div class="divider"></div>
+                    <h6 class="title">Filtros</h6>
+                    <p class="col s4">
+                      <label>
+                        <input ng-model="checkAll" type="checkbox" ng-change="checkChange('checkAll')" checked />
+                        <span>Todos</span>
+                      </label>
+                    </p>
+                    <p class="col s4">
+                      <label>
+                        <input ng-model="checkWarning" type="checkbox" ng-change="checkChange('checkWarning')" />
+                        <span>Riesgo</span>
+                      </label>
+                    </p>
+                    <p class="col s4">
+                      <label>
+                        <input ng-model="checkDanger" type="checkbox" ng-change="checkChange('checkDanger')" />
+                        <span>Inhabilitados</span>
+                      </label>
+                    </p>
+                  </div>   
                 </li>
                 <li class="collection-item avatar" ng-repeat="user in users | filter:searchText | filter:checkFilter">
                   <img src="images/tempo.jpg" alt="" class="circle">
