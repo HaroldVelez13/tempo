@@ -49,9 +49,12 @@
                           <input id="search" type="search" ng-model="searchText">
                           <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                           <i class="material-icons" ng-click="clearText()">close</i>
-                        </div>
-                        
-                        <p class="col s4">
+                        </div>                        
+                                          
+                      </form>
+                    </div>
+                  </nav>
+                  <p class="col s4">
                           <label>
                             <input ng-model="checkAll" type="checkbox" ng-change="checkChange('checkAll')" checked />
                             <span>Todos</span>
@@ -60,7 +63,7 @@
                         <p class="col s4">
                           <label>
                             <input ng-model="checkWarning" type="checkbox" ng-change="checkChange('checkWarning')" />
-                            <span>En Riesgo</span>
+                            <span>Riesgo</span>
                           </label>
                         </p>
                         <p class="col s4">
@@ -68,10 +71,7 @@
                             <input ng-model="checkDanger" type="checkbox" ng-change="checkChange('checkDanger')" />
                             <span>Inhabilitados</span>
                           </label>
-                        </p>                     
-                      </form>
-                    </div>
-                  </nav>
+                        </p>   
                 </li>
                 <br>
                 <li class="collection-item center" >
